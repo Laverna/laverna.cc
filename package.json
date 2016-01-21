@@ -1,0 +1,21 @@
+{
+  "name": "laverna.cc",
+  "version": "0.0.0",
+  "description": "laverna.cc homepage",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laverna/laverna.cc.git"
+  },
+  "keywords": [
+    "laverna",
+    "markdown",
+    "notes"
+  ],
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/Laverna/laverna.cc/issues"
+  },
+  "homepage": "https://github.com/Laverna/laverna.cc#readme"
+}
