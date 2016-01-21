@@ -2,8 +2,7 @@
   "name": "laverna.cc",
   "description": "laverna.cc homepage",
   "main": "",
-  "authors": [
-  ],
+  "authors": [],
   "license": "MPL-2.0",
   "keywords": [
     "laverna",
@@ -23,5 +22,8 @@
     "app/bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "bootstrap": "https://github.com/twbs/bootstrap.git#v4.0.0-alpha.2"
+  }
 }
