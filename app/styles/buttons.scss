@@ -1,0 +1,37 @@
+.btn.-page-intro.-start {
+    background    : #fff;
+    color         : $body-color;
+    border        : 3px solid #fff;
+    border-radius : 0;
+
+    padding    : $base-number * pow(1.25, -2) 25px;
+    transition : background .2s ease-in-out,border-color .2s ease-in-out;
+
+    font-variant : small-caps;
+    font-size    : $base-number * pow(1.25, 1);
+
+    &:hover {
+        border-color : #ecf0f1;
+        background   : #ecf0f1;
+    }
+}
+
+.btn.-page-intro.-download {
+    margin-left : ratio(1);
+    padding     : $base-number * pow(1.25, -2) 25px;
+
+    background    : transparent;
+    color         : #fff;
+    border        : 1px solid #fff;
+    border-radius : 0;
+    transition    : background .2s ease-in-out;
+
+    font-family  : 'Open Sans';
+    font-variant : small-caps;
+    font-size    : $base-number * pow(1.25, 1);
+
+    &:hover {
+        background : #fff;
+        color      : $body-color;
+    }
+}

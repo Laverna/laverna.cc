@@ -1,0 +1,25 @@
+$color-brand : #1abc9c;
+$color-blue  : #28324e;
+$color-gray  : #efefef;
+
+$base-number : 1rem;
+$base-ratio  : 1.618;
+
+@function pow($number, $exp) {
+    $value: 1;
+    @if $exp > 0 {
+        @for $i from 1 through $exp {
+            $value: $value * $number;
+        }
+    }
+    @else if $exp < 0 {
+        @for $i from 1 through -$exp {
+            $value: $value / $number;
+        }
+    }
+    @return $value;
+}
+
+@function ratio($pow) {
+    @return $base-number * pow($base-ratio, $pow);
+}

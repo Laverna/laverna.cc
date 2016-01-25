@@ -1,0 +1,97 @@
+@media(max-width: map-get($grid-breakpoints, 'lg')) {
+    .page.-intro {
+        min-height     : auto;
+        height         : auto;
+        padding-bottom : ratio(3);
+    }
+
+    .-page-intro.description {
+        position   : relative;
+        display    : block;
+        margin-top : ratio(3);
+    }
+}
+
+@media(max-width: map-get($grid-breakpoints, 'md') - 1) {
+    .page.-intro,.-page-intro {
+        text-align: center !important;
+    }
+
+    .page.-features {
+        text-align: center;
+    }
+}
+
+@media(max-width: map-get($grid-breakpoints, 'md')) {
+    .btn.-page-intro.-download,
+    .btn.-page-intro.-start {
+        padding   : initial;
+        font-size : initial;
+        padding   : $btn-padding-x $btn-padding-y * 2;
+    }
+
+    .-page-intro.title {
+        font-size: ratio(3);
+    }
+
+    .-page-intro.title--description {
+        font-size: ratio(1);
+    }
+
+    .page.-features.-one > .container > .row > :nth-child(2),
+    .page.-features.-two > .container > .row > :nth-child(2) {
+        margin-top: ratio(2);
+    }
+
+    .-page-features.-small.heading {
+        padding-bottom: ratio(-1);
+        font-size: ratio(1);
+    }
+}
+
+@media(max-width: map-get($grid-breakpoints, 'sm')) {
+    .navbar {
+        padding-top: ratio(1);
+    }
+
+    .-page-intro.title {
+        font-size: ratio(2);
+    }
+
+    .-page-intro.title--description {
+        font-size: ratio(1);
+    }
+
+    .btn.-page-intro.-start,
+    .btn.-page-intro.-download {
+        font-size: ratio(-1);
+        font-weight: 700;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .link.-download {
+        font-size: ratio(-1);
+    }
+
+    .navbar--logo {
+        width: ratio(1);
+    }
+
+    .navbar-dark .nav-item .nav-link {
+        font-size: ratio(-1);
+    }
+
+    .-page-features.heading,
+    .-page-download.heading {
+        font-size: ratio(1);
+    }
+
+    .-page-features.text {
+        font-size: ratio(0);
+    }
+
+    .icons.-footer {
+        padding-bottom: ratio(-1) !important;
+    }
+}

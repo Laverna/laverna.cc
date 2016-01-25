@@ -1,0 +1,22 @@
+.navbar {
+    padding-top : ratio(2);
+    background  : #71BA51;
+    border      : none;
+}
+
+.navbar--logo {
+    width: ratio(2);
+}
+
+.navbar-dark .nav-item .nav-link {
+    font-weight : 400;
+    color       : #fff;
+
+    border-bottom : 1px solid #fff;
+    transition    : background .2s ease-in-out;
+
+    &:hover {
+        color        : #fff;
+        border-color : $body-color;
+    }
+}
