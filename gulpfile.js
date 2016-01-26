@@ -9,7 +9,8 @@ var gulp     = require('gulp'),
     sass     = require('gulp-sass'),
     replace  = require('gulp-replace'),
     util     = require('gulp-util'),
-    fontmin = require('gulp-fontmin'),
+    image    = require('gulp-image'),
+    fontmin  = require('gulp-fontmin'),
     shell    = require('gulp-shell'),
     release  = util.env.release || '0.7.1',
     downLink = 'https://github.com/Laverna/laverna/releases/download/' + release + '/laverna-' + release + '-:platform:.zip';
@@ -125,6 +126,13 @@ gulp.task('fontmin', function(cb) {
     });
 });
 
+// Optimize images
+gulp.task('image', function() {
+    return gulp.src('./dist/images/**/*')
+    .pipe(image())
+    .pipe(gulp.dest('./dist/images'));
+});
+
 /**
  * Example:
  * `gulp build --release 0.7.1`
@@ -139,6 +147,7 @@ gulp.task('build', sequence(
     'replace:download',
     [
         'fontspider',
-        'fontmin'
+        'fontmin',
+        'image'
     ]
 ));
