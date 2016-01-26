@@ -9,6 +9,8 @@ var gulp     = require('gulp'),
     sass     = require('gulp-sass'),
     replace  = require('gulp-replace'),
     util     = require('gulp-util'),
+    fontmin = require('gulp-fontmin'),
+    shell    = require('gulp-shell'),
     release  = util.env.release || '0.7.1',
     downLink = 'https://github.com/Laverna/laverna/releases/download/' + release + '/laverna-' + release + '-:platform:.zip';
 
@@ -93,6 +95,36 @@ gulp.task('replace:download', function() {
     .pipe(gulp.dest('./dist'));
 });
 
+// Optimize web fonts
+gulp.task('fontspider', function() {
+    return gulp.src('./dist/index.html', {read: false})
+    .pipe(shell(
+        './node_modules/font-spider/bin/font-spider ./dist/index.html'
+    ));
+});
+
+// Fontspider can't optimize some Open Sans fonts
+function minifyFont(name, text, cb) {
+    gulp.src('./dist/fonts/' + name + '/*.ttf')
+    .pipe(fontmin({
+        text: text
+    }))
+    .pipe(gulp.dest('./dist/fonts/' + name))
+    .on('end', cb);
+}
+gulp.task('fontmin', function(cb) {
+    var buffers = [];
+
+    gulp.src('./dist/index.html')
+    .on('data', function(file) {
+        buffers.push(file.contents);
+    })
+    .on('end', function() {
+        var text = Buffer.concat(buffers).toString('utf-8');
+        minifyFont('Open Sans', text, cb);
+    });
+});
+
 /**
  * Example:
  * `gulp build --release 0.7.1`
@@ -104,5 +136,9 @@ gulp.task('build', sequence(
         'copy:html',
         'copy:assets'
     ],
-    'replace:download'
+    'replace:download',
+    [
+        'fontspider',
+        'fontmin'
+    ]
 ));
