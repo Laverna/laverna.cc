@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "laverna.cc homepage",
   "scripts": {
-    "start": "gulp"
+    "start": "npm i && gulp"
   },
   "repository": {
     "type": "git",
