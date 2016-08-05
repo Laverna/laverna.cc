@@ -3,7 +3,7 @@ html,body {
 }
 
 .page.-intro {
-    @include gradient-vertical(#71BA51, #00B16A);
+    @include gradient-y(#71BA51, #00B16A);
     // background : #71BA51;
     color      : #fff;
 
@@ -61,7 +61,7 @@ html,body {
 
     &.-two {
         background : #3D8EB9;
-        @include gradient-vertical(#4ECDC4, #19B5FE);
+        @include gradient-y(#4ECDC4, #19B5FE);
         color      : #fff;
     }
 
@@ -145,6 +145,39 @@ html,body {
 }
 
 .card-block.-feature {
-    background-color: transparent;
-    border-color: transparent;
+    background-color : transparent;
+    border-color     : transparent;
+    padding-left     : 0;
+}
+
+/**
+ * Sponsors page.
+ */
+.page.-sponsors {
+    padding-top    : ratio(4);
+    padding-bottom : ratio(3);
+}
+
+.sponsor--media {
+    border-top  : 1px solid lighten(#ccc, 14%);
+    padding-top : 1.5rem;
+
+    &:last-child {
+        border-bottom  : 1px solid lighten(#ccc, 14%);
+        padding-bottom : 1.5rem;
+    }
+}
+
+.sponsor--img {
+    width  : ratio(2.5);
+    height : ratio(2.5);
+}
+
+.sponsor--media {
+    margin-bottom: ratio(1);
+}
+
+.heading.-page-sponsor {
+    @extend .-page-features;
+    margin-top: 0;
 }

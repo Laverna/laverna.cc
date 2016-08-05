@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section id="features-1" class="page -features -one">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-7 image--container -page-features">
+                <img class="-page-features image" src="images/editor/medium.png" alt="" />
+            </div>
+            <div class="col-xs-12 col-md-4 offset-lg-1">
+                <h3 class="-page-features heading">Live markdown editing</h3>
+                <p class="-page-features text">Laverna has a simple and robust markdown editor, which can help you write faster than ever before with our live markdown preview.</p>
+                <h3 class="-page-features heading">Distraction free mode</h3>
+                <p class="-page-features text">The editor can be switched to distraction free mode where you can focus solely on writing notes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features-2" class="page -features -two">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <h3 class="-page-features heading">Available anytime and anywhere</h3>
+                <p class="-page-features text">Make your notes available on any device with your Dropbox & RemoteStorage account.</p>
+                <h3 class="-page-features heading">Keep your notes private</h3>
+                <p class="-page-features text">You can make your notes available only to you by enabling encryption.</p>
+            </div>
+            <div class="col-xs-12 col-md-7 offset-lg-1 image--container -page-features">
+                <img class="-page-features image" src="images/list/medium.png" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features-3" class="page -features -three -small hidden-xs-down">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="col-xs-12 col-md-4">
+                <div class="card card-block -feature">
+                    <h3 class="card-title -page-features -small heading"><i class="icon -page-features -small icon-ok-squared"></i> Tasks</h3>
+                    <p class="card-text">Keep simple to do lists organized in notes and notebooks.</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <div class="card card-block -feature">
+                    <h3 class="card-title -page-features -small heading"><i class="icon -page-features -small icon-keyboard"></i> Keybindings</h3>
+                    <p class="card-text">You can manage your notes without ever lifting your hands from your keyboard.</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <div class="card card-block -feature">
+                    <h3 class="card-title -page-features -small heading"><i class="icon -page-features -small icon-file-code"></i> Code highlighting</h3>
+                    <p class="card-text">Keep snippets of code to have access to them anytime and anywhere.</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <div class="card card-block -feature">
+                    <h3 class="card-title -page-features -small heading"><i class="icon -page-features -small icon-user-secret"></i> No registration</h3>
+                    <p class="card-text">Do you prefer to stay anonymous? You do not need to go through registration process to start using Laverna.</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <div class="card card-block -feature">
+                    <h3 class="card-title -page-features -small heading"><i class="icon -page-features -small icon-export"></i> Import & Export</h3>
+                    <p class="card-text">You can export your notes from Laverna and import them back anytime. You are not tied to using it forever.</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <div class="card card-block -feature">
+                    <h3 class="card-title -page-features -small heading"><i class="icon -page-features -small icon-github-circled"></i> Open Source</h3>
+                    <p class="card-text">Every line of code can be reviewed on Github and is available under MPL-2.0 license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="download" class="page -download">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center heading -page-download">Download</h1>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <a href="{{linux64}}" class="col-xs-12 link -download"><i class="icon-linux"></i> Linux x64</a>
+                <a href="{{linux32}}" class="col-xs-12 link -download"><i class="icon-linux"></i> Linux x32</a>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <a href="{{darwin}}" class="col-xs-12 link -download"><i class="icon-apple"></i> MacOS</a>
+                <a href="{{webapp}}" class="col-xs-12 link -download"><i class="icon-globe"></i> Self-hosted</a>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <a href="{{windows64}}" class="col-xs-12 link -download"><i class="icon-windows"></i> Windows x64</a>
+                <a href="{{windows32}}" class="col-xs-12 link -download"><i class="icon-windows"></i> Windows x32</a>
+            </div>
+            <div class="col-xs-12">
+                <p class="text-xs-center">* Laverna for android is coming soon</p>
+                <p class="text-xs-center">* Pre-releases are available on our <a target="blank" href="https://github.com/Laverna/laverna/releases">Github page</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

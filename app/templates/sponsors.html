@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section id="sponsors" class="page -sponsors -one">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <h3 class="heading -page-sponsor">Sponsors</h3>
+                <p>If you want to become a sponsor, check this <a href="https://salt.bountysource.com/teams/laverna">Bountysource page.</a></p>
+                <p>For default we put the link and logo for your Bountysource account. If you want to put the link and logo for your website instead, either contact us by email or edit <a href="https://github.com/Laverna/laverna.cc/blob/master/gulp/sponsors.json">this file.</a></p>
+            </div>
+            <div class="col-xs-12 col-md-7 offset-lg-1">
+                {% for sponsor in sponsors %}
+                <div class="media sponsor--media">
+                    <div class="media-left">
+                        {% if sponsor.logo %}
+                        <img class="media-object sponsor--img -logo" src="{{sponsor.logo}}" alt=""/>
+                        {% else %}
+                        <img class="media-object sponsor--img" src="{{sponsor.image}}" alt=""/>
+                        {% endif %}
+                    </div>
+                    <div class="media-body media-middle">
+                        <span class="pull-xs-right">
+                            ${{sponsor.amount}}
+                        </span>
+                        <div class="media-heading">
+                            {% if sponsor.url %}
+                            <a href="{{sponsor.url}}">{{sponsor.display_name}}</a>
+                            {% else %}
+                            {{sponsor.display_name}}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

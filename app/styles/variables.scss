@@ -4,6 +4,7 @@ $color-gray  : #efefef;
 
 $base-number : 1rem;
 $base-ratio  : 1.618;
+$enable-flex : true;
 
 @function pow($number, $exp) {
     $value: 1;

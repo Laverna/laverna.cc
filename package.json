@@ -2,7 +2,9 @@
   "name": "laverna.cc",
   "version": "0.0.0",
   "description": "laverna.cc homepage",
-  "scripts": {},
+  "scripts": {
+    "start": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Laverna/laverna.cc.git"
@@ -18,19 +20,27 @@
   },
   "homepage": "https://github.com/Laverna/laverna.cc#readme",
   "devDependencies": {
-    "del": "^2.2.0",
+    "del": "^2.2.1",
     "font-spider": "^0.3.8",
-    "gulp": "^3.9.0",
-    "gulp-connect": "^2.3.1",
-    "gulp-fontmin": "^0.7.3",
-    "gulp-image": "^1.3.0",
-    "gulp-minify-css": "^1.2.3",
-    "gulp-minify-html": "^1.0.5",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-connect": "^5.0.0",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-image": "^2.4.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-nunjucks-render": "^2.0.0",
     "gulp-purifycss": "^0.2.0",
     "gulp-replace": "^0.5.4",
-    "gulp-sass": "^2.1.1",
-    "gulp-sequence": "^0.4.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-sequence": "^0.4.5",
     "gulp-shell": "^0.5.2",
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.7",
+    "q": "^1.4.1",
+    "superagent": "^2.1.0",
+    "underscore": "^1.8.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.3"
   }
 }
