@@ -5,6 +5,7 @@ const logos = require('./sponsors');
 
 function onLoad($, res) {
     let sponsors = [];
+    const now    = new Date();
 
     res.body.forEach(sp => {
         if (!sp.id) {
@@ -17,16 +18,16 @@ function onLoad($, res) {
             amount : sp.alltime_amount,
         });
 
-        // Use Bountysource profile link
-        const now    = new Date(sponsor);
-        const spDate = new Date();
+        const spDate   = new Date(sponsor.created_at);
+        const timeDiff = Math.abs(now.getTime() - spDate.getTime());
+        const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
 
         // Old sponsor
-        if (now.getFullYear() !== spDate.getFullYear() ||
-            now.getMonth() !== spDate.getMonth()) {
+        if (daysDiff >= 30) {
             return;
         }
 
+        // Use Bountysource profile link
         if (sponsor.amount < 5 || !sponsor.url) {
             sponsor.url = `https://www.bountysource.com/people/${sponsor.slug}`;
         }
