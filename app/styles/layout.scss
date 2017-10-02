@@ -144,6 +144,9 @@ html,body {
     }
 }
 
+.card-block {
+    padding: 1.25rem;
+}
 .card-block.-feature {
     background-color : transparent;
     border-color     : transparent;
@@ -166,6 +169,11 @@ html,body {
         border-bottom  : 1px solid lighten(#ccc, 14%);
         padding-bottom : 1.5rem;
     }
+}
+
+.sponsor--media--body {
+    padding-left : 10px;
+    height       : 60px;
 }
 
 .sponsor--img {

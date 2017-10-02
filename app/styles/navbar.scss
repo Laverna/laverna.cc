@@ -8,9 +8,16 @@
     width: ratio(2);
 }
 
+.navbar-dark .nav-item {
+    margin-right: 10px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
 .navbar-dark .nav-item .nav-link {
     font-weight : 400;
     color       : #fff;
+    padding-top : 0;
 
     border-bottom : 1px solid #fff;
     transition    : background .2s ease-in-out;
