@@ -18,6 +18,15 @@ function onLoad($, res) {
         });
 
         // Use Bountysource profile link
+        const now    = new Date(sponsor);
+        const spDate = new Date();
+
+        // Old sponsor
+        if (now.getFullYear() !== spDate.getFullYear() ||
+            now.getMonth() !== spDate.getMonth()) {
+            return;
+        }
+
         if (sponsor.amount < 5 || !sponsor.url) {
             sponsor.url = `https://www.bountysource.com/people/${sponsor.slug}`;
         }
